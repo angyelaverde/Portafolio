@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angye Laverde — Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Angye Laverde</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-overlay">Menu</button>
+  </header>
+
+  <nav class="nav-overlay" id="nav-overlay" data-open="false">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <h1 class="hero-title">Angye Laverde</h1>
+        <p class="hero-role">Creación Digital — Diseño &amp; Desarrollo</p>
+        <p class="hero-tagline">Diseño identidades visuales y construyo productos digitales, mostrando el proceso tanto como el resultado.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-heading">About</h2>
+      <p>
+        <!-- TODO: reemplazar con la bio real de Angye (ver INPUT/Portafolio/Angye-Laverde.md). -->
+        Estudiante de Creación Digital enfocada en diseño, UX/UI, programación y creación de
+        contenido visual. Este portafolio muestra no solo resultados finales, sino el proceso
+        y la evolución de cada proyecto.
+      </p>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Desarrollo web</h3>
+          <p>Sitios y productos digitales construidos desde cero.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Identidad visual</h3>
+          <p>Diseño de marca, tipografía y sistemas visuales coherentes.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Productos digitales</h3>
+          <p>Experiencias UX/UI pensadas de extremo a extremo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <h2 class="section-heading">Proyectos</h2>
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-chip" data-filter="all" data-active="true">Todos</button>
+        <button class="filter-chip" data-filter="ux">UX/UI</button>
+        <button class="filter-chip" data-filter="dev">Programación</button>
+        <button class="filter-chip" data-filter="games">Videojuegos</button>
+        <button class="filter-chip" data-filter="visual">Diseño visual</button>
+      </div>
+      <!-- TODO: cada .project-card es un placeholder hasta elegir los proyectos reales (paso 4 del plan). -->
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="dev">
+          <img src="https://placehold.co/600x450/1e1630/b89cff?text=Proyecto" alt="Placeholder de proyecto">
+          <div class="project-card-body">
+            <h3>Nombre del proyecto</h3>
+            <p>Descripción corta del proyecto.</p>
+            <a class="project-cta" href="projects/project-template.html">Ver proceso</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div>
+      <p>¿Hablamos?</p>
+      <a href="mailto:hola@example.com">hola@example.com</a>
+    </div>
+    <div>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
